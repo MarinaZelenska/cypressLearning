@@ -6,7 +6,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
     "cy:run": "cypress run"
-
   },
   "repository": {
     "type": "git",
@@ -22,5 +21,8 @@
   "description": "",
   "devDependencies": {
     "cypress": "^15.14.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.4.0"
   }
 }

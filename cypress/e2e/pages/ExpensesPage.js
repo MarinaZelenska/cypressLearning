@@ -51,7 +51,7 @@ export class ExpensesPage {
   }
 
   getExpenseItems() {
-    return cy.get(this.selectors.expenseItem);
+    return cy.get('.expenses tbody tr');
   }
 }
 

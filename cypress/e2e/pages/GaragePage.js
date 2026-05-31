@@ -53,6 +53,14 @@ export class GaragePage {
   openFuelExpensesForFirstCar() {
     cy.get(this.selectors.fuelExpensesBtn).first().click();
   }
+
+  openFuelExpensesForCar() {
+    cy.visitApp('/panel/expenses');
+  }
+
+  openExpensesForCarByTitle(title) {
+    this.getCarByTitle(title).find('.btn-link').click();
+  }
 }
 
 export default new GaragePage();

@@ -79,3 +79,22 @@ Cypress.Commands.add('loginUser', () => {
     { cacheAcrossSpecs: true },
   );
 });
+
+Cypress.Commands.add('createExpense', ({ carId, reportedAt, mileage, liters, totalCost }) => {
+  return cy.request({
+    method: 'POST',
+    url: '/api/expenses',
+    auth: {
+      username: Cypress.env('username'),
+      password: Cypress.env('password'),
+    },
+    body: {
+      carId,
+      reportedAt,
+      mileage,
+      liters,
+      totalCost,
+      forceMileage: false,
+    },
+  });
+});
